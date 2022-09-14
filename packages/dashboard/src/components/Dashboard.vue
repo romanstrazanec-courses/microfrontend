@@ -75,34 +75,34 @@
       <Panel header="Tasks" style="height: 100%">
         <ul class="task-list">
           <li>
-            <Checkbox name="task" value="reports" v-model="tasksCheckbox" />
+            <Checkbox name="task" value="reports" v-model="tasksCheckbox"/>
             <span class="task-name">Sales Reports</span>
-            <i class="pi pi-chart-bar" />
+            <i class="pi pi-chart-bar"/>
           </li>
           <li>
-            <Checkbox name="task" value="invoices" v-model="tasksCheckbox" />
+            <Checkbox name="task" value="invoices" v-model="tasksCheckbox"/>
             <span class="task-name">Pay Invoices</span>
-            <i class="pi pi-dollar" />
+            <i class="pi pi-dollar"/>
           </li>
           <li>
-            <Checkbox name="task" value="dinner" v-model="tasksCheckbox" />
+            <Checkbox name="task" value="dinner" v-model="tasksCheckbox"/>
             <span class="task-name">Dinner with Tony</span>
-            <i class="pi pi-user" />
+            <i class="pi pi-user"/>
           </li>
           <li>
-            <Checkbox name="task" value="meeting" v-model="tasksCheckbox" />
+            <Checkbox name="task" value="meeting" v-model="tasksCheckbox"/>
             <span class="task-name">Client Meeting</span>
-            <i class="pi pi-users" />
+            <i class="pi pi-users"/>
           </li>
           <li>
-            <Checkbox name="task" value="theme" v-model="tasksCheckbox" />
+            <Checkbox name="task" value="theme" v-model="tasksCheckbox"/>
             <span class="task-name">New Theme</span>
-            <i class="pi pi-globe" />
+            <i class="pi pi-globe"/>
           </li>
           <li>
-            <Checkbox name="task" value="flight" v-model="tasksCheckbox" />
+            <Checkbox name="task" value="flight" v-model="tasksCheckbox"/>
             <span class="task-name">Flight Ticket</span>
-            <i class="pi pi-briefcase" />
+            <i class="pi pi-briefcase"/>
           </li>
         </ul>
       </Panel>
@@ -113,23 +113,23 @@
         <div class="p-grid">
           <div class="p-col-12">
             <Dropdown
-              v-model="dropdownCity"
-              :options="dropdownCities"
-              optionLabel="name"
-              placeholder="Select a City"
+                v-model="dropdownCity"
+                :options="dropdownCities"
+                optionLabel="name"
+                placeholder="Select a City"
             />
           </div>
           <div class="p-col-12">
-            <InputText type="text" placeholder="Name" />
+            <InputText type="text" placeholder="Name"/>
           </div>
           <div class="p-col-12">
-            <InputText type="text" placeholder="Age" />
+            <InputText type="text" placeholder="Age"/>
           </div>
           <div class="p-col-12">
-            <InputText type="text" placeholder="Message" />
+            <InputText type="text" placeholder="Message"/>
           </div>
           <div class="p-col-12">
-            <Button type="button" label="Send" icon="pi pi-envelope" />
+            <Button type="button" label="Send" icon="pi pi-envelope"/>
           </div>
         </div>
       </Panel>
@@ -175,7 +175,7 @@
               <p>Updated 1 minute ago</p>
             </div>
             <div class="p-col-6" style="text-align: right">
-              <Button label="Refresh" icon="pi pi-refresh" />
+              <Button label="Refresh" icon="pi pi-refresh"/>
             </div>
           </div>
         </div>
@@ -186,14 +186,14 @@
               <h5 class="activity p-m-0">Income</h5>
               <div class="count">$900</div>
             </div>
-            <ProgressBar :value="95" :showValue="false" />
+            <ProgressBar :value="95" :showValue="false"/>
           </li>
           <li>
             <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
               <h5 class="activity p-m-0">Tax</h5>
               <div class="count" style="background-color: #f9c851">$250</div>
             </div>
-            <ProgressBar :value="24" :showValue="false" />
+            <ProgressBar :value="24" :showValue="false"/>
           </li>
         </ul>
       </Panel>
@@ -203,19 +203,19 @@
       <div class="card">
         <h1 style="font-size: 16px">Recent Sales</h1>
         <DataTable
-          :value="products"
-          class="p-datatable-customers"
-          :rows="5"
-          style="margin-bottom: 20px"
-          :paginator="true"
+            :value="products"
+            class="p-datatable-customers"
+            :rows="5"
+            style="margin-bottom: 20px"
+            :paginator="true"
         >
           <Column>
-            <template #header> Logo </template>
+            <template #header> Logo</template>
             <template #body="slotProps">
               <img
-                :src="'assets/layout/images/product/' + slotProps.data.image"
-                :alt="slotProps.data.image"
-                width="50"
+                  :src="'assets/layout/images/product/' + slotProps.data.image"
+                  :alt="slotProps.data.image"
+                  width="50"
               />
             </template>
           </Column>
@@ -227,17 +227,17 @@
             </template>
           </Column>
           <Column>
-            <template #header> View </template>
+            <template #header> View</template>
             <template #body>
               <Button
-                icon="pi pi-search"
-                type="button"
-                class="p-button-success p-mr-2 p-mb-1"
+                  icon="pi pi-search"
+                  type="button"
+                  class="p-button-success p-mr-2 p-mb-1"
               ></Button>
               <Button
-                icon="pi pi-times"
-                type="button"
-                class="p-button-danger p-mb-1"
+                  icon="pi pi-times"
+                  type="button"
+                  class="p-button-danger p-mb-1"
               ></Button>
             </template>
           </Column>
@@ -246,7 +246,7 @@
     </div>
     <div class="p-col-12 p-lg-6">
       <div class="card">
-        <Chart type="line" :data="lineData" />
+        <Chart type="line" :data="lineData"/>
       </div>
     </div>
   </div>
@@ -284,11 +284,11 @@ export default {
     return {
       tasksCheckbox: [],
       dropdownCities: [
-        { name: 'New York', code: 'NY' },
-        { name: 'Rome', code: 'RM' },
-        { name: 'London', code: 'LDN' },
-        { name: 'Istanbul', code: 'IST' },
-        { name: 'Paris', code: 'PRS' },
+        {name: 'New York', code: 'NY'},
+        {name: 'Rome', code: 'RM'},
+        {name: 'London', code: 'LDN'},
+        {name: 'Istanbul', code: 'IST'},
+        {name: 'Paris', code: 'PRS'},
       ],
       dropdownCity: null,
       options: {
@@ -354,6 +354,7 @@ export default {
 
       .p-datatable-tbody > tr {
         border-bottom: 1px solid #dee2e6;
+
         > td {
           text-align: left;
           display: flex;
@@ -381,6 +382,7 @@ export default {
     }
   }
 }
+
 $fontSize: 14px;
 $bodyBgColor: #edf0f5;
 $textColor: #333333;
@@ -476,6 +478,7 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+
 @mixin icon-override($icon) {
   &:before {
     content: $icon;
@@ -485,13 +488,13 @@ h6 {
 @mixin linear-gradient($top, $bottom) {
   background: $top; /* Old browsers */
   background: linear-gradient(to bottom, $top 0%, $bottom 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0); /* IE6-9 */
 }
 
 @mixin linear-gradient-left($left, $right) {
   background: $left; /* Old browsers */
   background: linear-gradient(to right, $left 0%, $right 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$left, endColorstr=$right,GradientType=1 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$left, endColorstr=$right, GradientType=1); /* IE6-9 */
 }
 
 @mixin opacity($opacity) {
@@ -519,6 +522,7 @@ h6 {
     clear: both;
   }
 }
+
 mark {
   background: #fff8e1;
   padding: 0.25rem 0.4rem;
@@ -561,12 +565,14 @@ p {
     }
   }
 }
+
 /* Footer */
 $footerBgColor: #ffffff;
 .dashboard {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
-    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   background-color: #edf0f5;
+
   .summary {
     position: relative;
 

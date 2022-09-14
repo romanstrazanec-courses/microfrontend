@@ -1,4 +1,4 @@
-const { VueLoaderPlugin } = require('vue-loader');
+const {VueLoaderPlugin} = require('vue-loader');
 
 module.exports = {
   entry: './src/index.js',
@@ -13,7 +13,7 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|woff|svg|eot|ttf)$/i,
         use: [
-          { loader: 'file-loader' },
+          {loader: 'file-loader'},
         ],
       },
       {

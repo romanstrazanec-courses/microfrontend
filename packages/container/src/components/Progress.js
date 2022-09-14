@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
+import {makeStyles, createStyles} from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 const useStyles = makeStyles((theme) => {
@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <div className={classes.bar}>
-      <LinearProgress />
+      <LinearProgress/>
     </div>
   )
 }
